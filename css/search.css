@@ -1,0 +1,90 @@
+/* 
+
+        SEARCH.PHP STYLE VE SEARCH ICON
+
+
+*/
+
+
+/* SEARCH STYLE ---> */
+#search{
+    padding: 30px 75px;
+}
+.search {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.81);
+}
+
+.search .form-control {
+    padding: 30px;
+    font-size: 25px;
+    outline: none;
+
+}
+
+
+.search .i-text {
+    color: gray;
+    font-size: 25px;
+}
+
+.search button:hover .i-text {
+    color: rgb(152, 152, 152);
+}
+
+#search .form-control {
+    padding: 30px;
+    font-size: 25px;
+}
+
+#search .i-text {
+    color: gray;
+    font-size: 25px;
+}
+
+#search button:hover .i-text {
+    color: rgb(152, 152, 152);
+}
+#search div.results p {
+    margin: 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+#search div.results p+span {
+    color: silver;
+}
+
+
+/* <--- SEARCH STYLE */
+
+@media only screen and (min-width: 1200px) {
+    #search{
+        padding: 30px 75px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #search{
+        padding: 15px 75px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #search{
+        padding: 15px 15px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    #search{
+        padding: 15px 15px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #search{
+        padding: 15px 15px;
+    }
+}

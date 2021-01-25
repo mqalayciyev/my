@@ -1,0 +1,17 @@
+#news span{
+    cursor: pointer;
+}
+
+.news-update{
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.news-update .bg-primary{
+    max-height: 80vh;
+    overflow: auto;
+}

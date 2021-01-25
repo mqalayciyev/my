@@ -1,0 +1,739 @@
+/* 
+
+        HOME.PHP STYLE
+
+
+
+*/
+
+
+/* HOME --->*/
+
+
+/* EN SON OYNANILAN OYUN NETICESI */
+
+.home .last-game {
+    background-color: rgb(233, 231, 231);
+    /* box-sizing: border-box; */
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.home .h3-weight {
+    font-weight: 200;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.home .last-game img {
+    width: 100px;
+    height: 100px;
+}
+
+.home .last-game button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.home .last-game button a {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #028b30;
+}
+
+.home .last-game button:hover a {
+    color: white;
+}
+
+.home .last-game h5 {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.home .last-game div.col-12 i.fis {
+    font-size: 20px;
+    position: relative;
+    white-space: pre;
+}
+
+.home .last-game div.col-12 i.thid {
+    font-size: 20px;
+    position: relative;
+    white-space: pre;
+}
+
+.home .last-game div.col-12 p.sec span.span {
+    font-size: 70px;
+    font-weight: 900;
+    font-family: "Rowdies";
+    position: relative;
+    top: 6vh;
+}
+
+.home .last-game div.col-12 p.sec span.span-center span {
+    position: relative;
+    top: 4vh;
+    margin: 30px;
+    content: "";
+    width: 1px;
+    height: 80px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: silver;
+}
+
+
+/* NOVBETI OYUN MELUMATI */
+
+.home .coming-last-game {
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+.home .coming-last-game .coming-game a:hover {
+    text-decoration: none;
+}
+
+.home .coming-last-game .coming-game h4 {
+    text-transform: uppercase;
+    padding-left: 5px;
+    border-left: 3px solid #ffc107;
+    font-weight: bold;
+}
+
+.home .coming-last-game .coming-game h5 {
+    text-transform: uppercase;
+    padding: 2px;
+    font-size: 18px;
+    color: white;
+    width: max-content;
+    border: 3px solid #258309;
+    border-radius: 5px;
+    background-color: #258309;
+    font-weight: bold;
+}
+
+.home .coming-last-game .coming-game .row p.m-0 {
+    text-transform: uppercase;
+}
+
+.home .coming-last-game .coming-game .row p.m-0.fist {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.home .coming-last-game .coming-game .row .col-12 p {
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.home .coming-last-game .tour-table {
+    padding-top: 1px;
+}
+
+.home .coming-last-game .tour-table .t {
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.home .coming-last-game .tour-table h4 {
+    text-transform: uppercase;
+    padding-left: 5px;
+    border-left: 3px solid #ffc107;
+    font-weight: bold;
+}
+
+.home .coming-last-game .tour-table h5 {
+    text-transform: uppercase;
+    font-family: "Merriweather";
+    padding: 2px;
+    font-size: 18px;
+    color: white;
+    width: max-content;
+    border: 3px solid #258309;
+    border-radius: 5px;
+    background-color: #258309;
+    font-weight: 900;
+}
+
+.home .coming-last-game img {
+    width: 100px;
+    height: 100px;
+}
+
+.home .coming-last-game .tour-logo .row {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.home .coming-last-game .logo-img-div {
+    background: url("../media/flag/Birinci_Divizion_loqo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.home .coming-last-game .tour-table button {
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.home .coming-last-game .tour-table button a {
+    font-weight: bold;
+    color: #028b30;
+}
+
+.home .coming-last-game .tour-table button:hover a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* EN SON XEBERLER */
+
+.home .last-news {
+    padding-right: 65px;
+    padding-left: 65px;
+}
+.home .last-news .card-column .card {
+    height: max-content;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+}
+.home .last-news .card-column .card .card-body p {
+    margin: 0px!important;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.home .last-news .card-column .card a {
+    text-decoration: none;
+}
+
+.home .last-news .card-column .card .d-block.col-12.p-0 div {
+    white-space: wrap;
+    width: 70px;
+    height: 70px;
+    background-color: #258309;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: inline-grid;
+}
+
+
+.home .last-news .card-column .card .d-block.col-12.p-0 div span {
+    display: block;
+    align-self: center;
+    font-size: 20px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.home .last-news .card-column .card .d-block.col-12.p-0 div span:first-child {
+    font-weight: 900;
+}
+
+.home .last-news .card-column .card h4 {
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.home .last-news .card-column .card p {
+    font-size: 15px;
+    color: black;
+}
+
+.home .last-news .card-column .card .d-block.col-12.p-0 {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.home .last-news .card-column .card .d-block.col-12.p-0 img {
+    transition: all 1s;
+}
+
+.home .last-news .card-column .card:hover .d-block.col-12.p-0 img {
+    transform: scale(1.1, 1.1);
+}
+
+.home .last-news button {
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.home .last-news button a {
+    font-weight: bold;
+    color: #028b30;
+}
+
+.home .last-news button:hover a {
+    color: white;
+    text-decoration: none;
+}
+
+/* VIDEO */
+.home .video {
+    padding: 0px 65px;
+}
+.home .video .video-player{
+    height: 70vh;
+}
+.home .video .playlist{
+    overflow: auto;
+    height: 70vh;
+}
+.home .video .playlist video{
+    cursor: pointer;
+}
+/* VIDEO */
+
+
+/* FOTOALBOM */
+
+.home .fotoalbom .col-12 {
+    padding-left: 41px;
+    padding-right: 41px;
+}
+
+.fotoalbom #slides {
+    margin: 0;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.fotoalbom .glide__bullets {
+    z-index: 0!important;
+}
+.fotoalbom .glide__slide img {
+    width: 100%;
+    max-height: 60vh;
+}
+
+.fotoalbom .glide__slide {
+    display: flex;
+    cursor: grab;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    opacity: 0.9;
+    filter: blur(2px);
+    transition: all 0.3s linear;
+    transform: scale(0.95);
+}
+
+.fotoalbom .glide__slide:active {
+    cursor: grabbing;
+}
+
+.fotoalbom .glide__slide--active {
+    box-shadow: 4px 4px 6px gray, -4px 4px 6px gray, 4px -4px 6px gray, -4px -4px 6px gray;
+    opacity: 1;
+    filter: none;
+    transition: all 0.6s;
+    transform: scale(1);
+}
+
+.fotoalbom .glide__slide--active:hover {
+    box-shadow: 4px 4px 13px gray, -4px 4px 13px gray, 4px -4px 13px gray, -4px -4px 13px gray;
+}
+
+.fotoalbom .glide__slide span {
+    display: none;
+}
+
+.fotoalbom .glide__slide--active span {
+    cursor: pointer;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    opacity: 0.3;
+}
+
+.fotoalbom .glide__slide--active:hover span {
+    display: block;
+}
+
+.fotoalbom .glide__slide--active span:hover {
+    opacity: 1;
+}
+
+.fotoalbom .glide__track {
+    height: 70vh;
+    display: grid;
+    align-content: center;
+}
+
+.fotoalbom .glide__slides {
+    overflow: visible;
+}
+
+.home .fotoalbom button {
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.home .fotoalbom button a {
+    font-weight: bold;
+    color: #028b30;
+}
+
+.home .fotoalbom button:hover a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* KOMANDA */
+
+.home .komanda {
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+.komanda .glide__slides .glide__slide {
+    cursor: grab;
+    max-height: min-content;
+}
+
+.komanda .glide__slides .glide__slide:active {
+    cursor: grabbing;
+}
+
+.komanda .glide__arrow {
+    position: absolute;
+    display: block;
+    top: 45%;
+    z-index: 0;
+    color: lightgray;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 3px 12px;
+    background-color: #258309;
+    border: 2px solid #258309;
+    border-radius: 0!important;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
+    text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    cursor: pointer;
+    transition: none;
+    transform: translateY(0)!important;
+    line-height: 1;
+    transform: skew(165deg, 0deg)!important;
+    ;
+}
+
+
+
+.komanda .glide__arrow:hover {
+    color: white;
+    background-color: #258309;
+    border: 3px solid #258309;
+}
+
+.komanda .glide__arrow--left {
+    left: -20px!important;
+}
+
+.komanda .glide__arrow--right {
+    right: -20px!important;
+}
+
+.komanda .glide__slides .card-div {
+    height: 100px;
+}
+
+.komanda .glide__slides div.card-div ul {
+    background-color: #028b30;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+}
+
+.komanda .glide__slides div.card-div ul li {
+    padding: 0;
+    position: relative;
+    max-width: 120px;
+}
+
+.komanda .glide__slides div.card-div ul li span {
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+.komanda .glide__slides div.card-div ul li a:hover {
+    text-decoration: none;
+}
+
+.komanda .glide__slides div.card-div ul li:nth-of-type(1) span {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.komanda .glide__slides div.card-div ul li:nth-of-type(2) span::before {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    background-color: white;
+    width: 2px;
+    height: 80px;
+}
+
+.home .komanda button {
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.home .komanda button a {
+    font-weight: bold;
+    color: #028b30;
+}
+
+.home .komanda button:hover a {
+    color: white;
+    text-decoration: none;
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    
+    .home .last-news .card-column .card {
+        height: max-content;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        border: 0;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .home .last-news .card-column .card .card-body p {
+        margin: 0px!important;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+    }
+    .home .video {
+        padding: 0px 65px;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    
+    .home .last-news .card-column .card {
+        height: max-content;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        border: 0;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .home .last-news .card-column .card .card-body p {
+        margin: 0px!important;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+    .home .last-game {
+        background-color: rgb(233, 231, 231);
+        /* box-sizing: border-box; */
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .home .coming-last-game {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .home .last-news {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .home .video {
+        padding: 0px 10px;
+    }
+    .home .fotoalbom .col-12 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .home .komanda {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .fotoalbom .glide__slide--active {
+        box-shadow: none;
+        opacity: 1;
+        filter: none;
+        transform: scale(1);
+    }
+    .komanda .glide__arrow--left {
+        left: 0px!important;
+    }
+    .komanda .glide__arrow--right {
+        right: 0px!important;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+
+
+    .home .last-news .card-column .card {
+        height: max-content;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        border: 0;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .home .last-news .card-column .card .card-body p {
+        margin: 0px!important;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+    }
+    .home .last-game {
+        background-color: rgb(233, 231, 231);
+        /* box-sizing: border-box; */
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .home .coming-last-game {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .home .last-news {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .home .video {
+        padding: 0px 10px;
+    }
+    .home .fotoalbom .col-12 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .home .komanda {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .fotoalbom .glide__slide--active {
+        box-shadow: none;
+        opacity: 1;
+        filter: none;
+        transform: scale(1);
+    }
+    .komanda .glide__arrow--left {
+        left: 0px!important;
+    }
+    .komanda .glide__arrow--right {
+        right: 0px!important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+
+    
+    .home .last-news .card-column .card {
+        height: max-content;
+        white-space: wrap;
+        text-overflow: ellipsis;
+        border: 0;
+        border-radius: 5px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+    .home .last-news .card-column .card .card-body p {
+        margin: 0px!important;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 6;
+        -webkit-box-orient: vertical;
+    }
+    .home .video .video-player{
+        height: 35vh;
+    }
+    .home .video .playlist{
+        overflow: auto;
+        height: 50vh;
+    }
+    .home .last-game {
+        background-color: rgb(233, 231, 231);
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .home .coming-last-game {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .home .last-news {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .home .video {
+        padding: 0px 0px;
+    }
+    .home .fotoalbom .col-12 {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .home .komanda {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .fotoalbom .glide__slide--active {
+        box-shadow: none;
+        opacity: 1;
+        filter: none;
+        transform: scale(1);
+    }
+    .komanda .glide__arrow--left {
+        left: 0px!important;
+    }
+    .komanda .glide__arrow--right {
+        right: 0px!important;
+    }
+}

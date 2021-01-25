@@ -1,0 +1,1017 @@
+/* 
+
+        TEAM.PHP STYLE
+
+
+*/
+
+
+/* TEAM STYLE ---> */
+
+
+/* HAQQIMIZDA ---> */
+
+#team #about{
+    padding-left: 65px;
+    padding-right: 65px;
+}
+#team #coming-games{
+    padding-left: 65px;
+    padding-right: 65px;
+}
+#team #games{
+    padding-left: 65px;
+    padding-right: 65px;
+}
+#team #tournament{
+    padding-left: 65px;
+    padding-right: 65px;
+}
+#team #staff{
+    padding-left: 65px;
+    padding-right: 65px;
+}
+#team #stadium{
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+#team #about img {
+    width: 60%;
+    padding: 30px 30px 30px 0px;
+}
+
+#team #about .about-div {
+    display: flex;
+    background-color: rgba(224, 231, 33, .7);
+    width: 65%;
+    position: absolute;
+    right: 2%;
+    top: 0;
+    height: 73.6vh;
+    overflow: auto;
+    align-content: center;
+    padding: 0% 5% 0% 10%;
+}
+
+#team #about .about-div p {
+    width: 100%;
+    margin: 20px 0px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#team #about .about-div span {
+    border-top: 5px solid #258309;
+    padding: 15px 0px;
+    font-weight: 400;
+}
+
+
+/* <--- HAQQIMIZDA */
+
+
+/* NOVBETI OYUNLAR ---> */
+
+#coming-games .result .col-12.bg-success.position-relative {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#coming-games .result a:hover {
+    text-decoration: none;
+}
+
+#coming-games .result .col-12.bg-success .row.justify-content-center::before {
+    content: "";
+    transform: skewX(-24deg);
+    display: inline-block;
+    position: absolute;
+    left: -20px;
+    width: 40px;
+    height: 80%;
+    background-color: #ffc107;
+}
+
+#coming-games .result .col-12.bg-success .gorus {
+    color: white;
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+#coming-games .result h4 {
+    text-transform: uppercase;
+}
+#coming-games .result h4 span{
+    color: #028b30!important;
+}
+
+#coming-games .result .col-12.bg-success {
+    overflow: hidden;
+}
+
+#coming-games .result .col-12.bg-success p {
+    color: white;
+}
+
+#coming-games .result .row.justify-content-center div.first-div p {
+    margin: 0;
+}
+
+#coming-games .result .row.justify-content-center div.first-div p:first-child {
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#coming-games .result .row.justify-content-center div.second-div p {
+    text-transform: uppercase;
+}
+/* #coming-games .result .row.justify-content-center div.second-div div.row {
+    width: 80%;
+} */
+
+
+/* <--- NOVBETI OYUNLAR */
+
+
+/* OYUN TARIXCESI ---> */
+
+#games .result h4 {
+    text-transform: uppercase;
+}
+#games .result h4 span{
+    color: #028b30!important;
+}
+
+#games .result a:hover {
+    text-decoration: none;
+}
+
+#games .result .card-divs .bg-green {
+    background-color: #028b30;
+    overflow: hidden;
+    padding-top: 3px;
+    min-width: 250px;
+    max-width: 300px;
+    min-height: 270px;
+    margin: 15px;
+}
+
+#games .result .card-divs .bg-green .bg-white::before {
+    content: "";
+    transform: skewX(-40deg);
+    display: inline-block;
+    position: absolute;
+    left: -29px;
+    width: 40px;
+    height: 25%;
+    background-color: #ffc107;
+}
+
+#games .result .card-divs .bg-green .gorus {
+    color: white;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 6px;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: transparent;
+}
+#games .result .card-divs .bg-green .row.align-items-end.justify-content-center{
+    /* height: 100%;  */
+    padding: 25px;
+}
+
+/* <--- OYUN TARIXCESI */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* TOURNAMENT --->*/
+
+#tournament div {
+    overflow: auto;
+    min-height: 443px;
+}
+
+
+/* <--- TOURNAMENT */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* STAFF --->*/
+
+#staff h4 {
+    margin-top: 40px;
+    text-transform: uppercase;
+}
+
+#staff .card-column {
+    column-gap: 5px;
+}
+
+#staff .card-column div.card {
+    margin: 10px;
+    min-width: 280px;
+}
+
+#staff .card-column div.card .img-div {
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+}
+
+#staff .card-column div.card img {
+    transition: all 1s;
+}
+
+#staff .card-column div.card:hover img {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+#staff .card-column .card .card-div {
+    height: 100px;
+}
+
+#staff .card-column .card div.card-div ul {
+    background-color: #028b30;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    height: 100%;
+}
+
+#staff .card-column .card div.card-div ul li {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+#staff .card-column .card div.card-div ul li span {
+    font-size: 25px;
+    color:white;
+    text-transform: uppercase;
+    word-wrap: break-word;
+}
+
+#staff .card-column div.card-div ul li a:hover {
+    text-decoration: none;
+}
+
+#staff .card-column .card div.card-div ul li:nth-of-type(1) span {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#staff .card-column .card div.card-div ul li:nth-of-type(1) {
+    max-width: 70px;
+    text-align: center;
+}
+
+#staff .card-column .card div.card-div ul li:nth-of-type(2) {
+    max-width: 10px;
+}
+
+#staff .card-column .card div.card-div ul li:nth-of-type(2) span::before {
+    content: "";
+    position: absolute;
+    bottom: -40px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    width: 2px;
+    height: 80px;
+}
+#staff .right-div{
+    /* margin-left: 15px; */
+    transition: all 1s;
+}
+
+#right-navbar {
+    width: 0px;
+    background-color: #1eac4d;
+    z-index: 1;
+    visibility: hidden;
+    /* transition: all 1s; */
+}
+
+#right-navbar .row {
+    visibility: hidden;
+}
+
+#right-navbar div {
+    height: 100%;
+    overflow: auto;
+}
+
+#right-navbar strong {
+    font-size: 100px;
+    position: absolute;
+    right: -60px;
+    display: flex;
+    height: 100%;
+    font-weight: 300;
+    align-items: center;
+    cursor: pointer;
+    color: #006400;
+    /* transition: all 0.3s; */
+    text-shadow: 15px 0px 2px #008000, 30px 0px 2px #00FF00;
+}
+
+#right-navbar h4 {
+    margin: 0;
+    color: lightgray;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+#right-navbar p {
+    margin: 0;
+}
+
+#right-navbar p span {
+    font-size: 100%;
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#right-navbar p span:hover {
+    border-radius: 5px;
+    background-color: rgb(105, 209, 105);
+}
+
+
+/*  <--- STAFF*/
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* STADIUM ---> */
+
+#stadium p {
+    text-align: justify;
+}
+
+#stadium img {
+    margin-right: 20px;
+    margin-bottom: 0px;
+    float: left;
+}
+
+
+/* <--- STADIUM */
+
+
+/* OYUNCU HAQDA MELUMAT ---> */
+
+#staff-info .img-full div.card {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#staff-info .img-full img {
+    transition: all 1s;
+    user-select: none;
+}
+
+#staff-info .img-full img:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+#staff-info .col-12.mt-5 {
+    padding-left: 65px;
+    padding-right: 65px;
+}
+
+#staff-info .col-12 h3 {
+    text-transform: uppercase;
+    padding-left: 5px;
+    border-left: 3px solid #ffc107;
+    font-weight: bold;
+}
+
+#staff-info .player-info-div {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+#staff-info .row.justify-content-center.h-100 {
+    background-image: url(../media/about/img2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#staff-info .player-info-div span {
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+#staff-info .player-info-div img {
+    width: 40px;
+    height: 40px;
+}
+
+#staff-info .player-info-div p {
+    margin: 0;
+}
+
+#staff-info .player-info-div p strong {
+    font-weight: 700;
+}
+
+#staff-info .player-info-div p i {
+    margin: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    color: lightgray;
+}
+
+#staff-info .player-info-div p a:hover i {
+    transform: scale(1.1);
+    color: white;
+}
+
+
+/* <--- OYUNCU HAQDA MELUMAT */
+
+
+/* <--- TEAM STYLE */
+
+@media only screen and (min-width: 1200px) {
+    #team #about{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #coming-games{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #games{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #tournament{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #staff{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #stadium{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(2) p {
+        display: none;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(3) p {
+        display: none;
+
+    }
+    #team #about img {
+        width: 60%;
+        padding: 30px 30px 30px 0px;
+    }
+    
+    #team #about .about-div {
+        display: flex;
+        background-color: rgba(224, 231, 33, .7);
+        width: 65%;
+        position: absolute;
+        right: 2%;
+        top: 0;
+        height: 73.6vh;
+        overflow: auto;
+        align-content: center;
+        padding: 0% 5% 0% 10%;
+    }
+    
+    #team #about .about-div p {
+        width: 100%;
+        margin: 20px 0px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+    
+    #team #about .about-div span {
+        border-top: 5px solid #258309;
+        padding: 15px 0px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #team #about{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #coming-games{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #games{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #tournament{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #staff{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #team #stadium{
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #staff-info .col-12.mt-5 {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+    #coming-games .result .col-12.bg-success .row.justify-content-center::before {
+        content: "";
+        transform: skewX(-37deg);
+        display: inline-block;
+        position: absolute;
+        left: -22px;
+        width: 45px;
+        height: 25%;
+        background-color: #ffc107;
+    }
+    
+    #coming-games .result .col-12.bg-success .row.justify-content-center::after {
+        content: "E";
+        color: white;
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        font-size: 20px;
+        font-weight: 400;
+        background-color: transparent;
+    }
+    #coming-games .result .row.justify-content-center div.first-div p {
+        margin: 0;
+        text-align: center;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row {
+        text-transform: uppercase;
+        width: 75%;
+        position: relative;
+        padding: 10px 0px;
+        margin: 0px auto;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(1) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+        display: block;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(2) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(3) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(4) {
+        text-transform: uppercase;
+        width: 50%;
+        text-align: center;
+        display: block;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(2) p {
+        display: none;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(3) p {
+        display: none;
+
+    }
+    
+    #team #about img {
+        width: 600px;
+
+        margin-top: 1.5rem;
+        padding: 30px 30px 30px 0px;
+    }
+
+    #team #about .about-div {
+        background-color: rgba(224, 231, 33, .7);
+        width: 80%;
+        position: absolute;
+        right: 1%;
+        top: 0;
+        height: 70vh;
+        align-content: center;
+        padding: 0% 5% 0% 5%;
+    }
+
+    #team #about .about-div p {
+        width: 100%;
+        margin: 0px 0px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    #team #about .about-div span {
+        border-top: 5px solid #258309;
+        margin-top: 15px;
+        padding: 10px 0px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #coming-games .result .col-12.bg-success .row.justify-content-center::before {
+        content: "";
+        transform: skewX(-24deg);
+        display: inline-block;
+        position: absolute;
+        left: -20px;
+        width: 40px;
+        height: 80%;
+        background-color: #ffc107;
+    }
+    
+    #coming-games .result .col-12.bg-success .row.justify-content-center::after {
+        content: "E";
+        color: white;
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        font-size: 20px;
+        font-weight: 400;
+        background-color: transparent;
+    }
+    #coming-games .result .row.justify-content-center div.first-div p {
+        margin: 0;
+        text-align: center;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row {
+        text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        padding: 10px 0px;
+        margin: 0px auto;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(1) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+        display: block;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(2) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(3) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(4) {
+        text-transform: uppercase;
+        width: 50%;
+        text-align: center;
+        display: block;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(2) p {
+        display: none;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(3) p {
+        display: none;
+
+    }
+    #team #about img {
+        width: 100%;
+        padding: 0px;
+    }
+    
+    #team #about .about-div {
+        display: block;
+        background-color: rgba(224, 231, 33, .7);
+        width: 100%;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        height: max-content;
+        align-content: center;
+        padding: 15px;
+    }
+    
+    #team #about .about-div p {
+        width: 100%;
+        margin: 20px 0px;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: justify;
+    }
+    
+    #team #about .about-div span {
+        border-top: 5px solid #258309;
+        padding: 0px;
+        font-weight: 400;
+    }
+    #team #about{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #coming-games{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #games{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #tournament{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #staff{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #stadium{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #staff-info .col-12.mt-5 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    #coming-games .result .col-12.bg-success .row.justify-content-center::before {
+        content: "";
+        transform: skewX(-37deg);
+        display: inline-block;
+        position: absolute;
+        left: -22px;
+        width: 45px;
+        height: 25%;
+        background-color: #ffc107;
+    }
+    
+    #coming-games .result .col-12.bg-success .row.justify-content-center::after {
+        content: "E";
+        color: white;
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        font-size: 20px;
+        font-weight: 400;
+        background-color: transparent;
+    }
+    #coming-games .result .row.justify-content-center div.first-div p {
+        margin: 0;
+        text-align: center;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row {
+        text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        padding: 10px 0px;
+        margin: 0px auto;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(1) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+        display: none;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(2) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(3) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(4) {
+        text-transform: uppercase;
+        width: 50%;
+        text-align: center;
+        display: none;
+
+    }
+    #team #about{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #coming-games{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #games{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #tournament{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #staff{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #stadium{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #staff-info .col-12.mt-5 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #about img {
+        width: 100%;
+        padding: 0px;
+    }
+
+    
+    #team #about .about-div {
+        display: block;
+        background-color: rgba(224, 231, 33, .7);
+        width: 100%;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        height: max-content;
+        align-content: center;
+        padding: 15px;
+    }
+    
+    #team #about .about-div p {
+        width: 100%;
+        margin: 20px 0px;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: justify;
+    }
+    
+    #team #about .about-div span {
+        border-top: 5px solid #258309;
+        padding: 0px;
+        font-weight: 400;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #coming-games .result .col-12.bg-success .row.justify-content-center::before {
+        content: "";
+        transform: skewX(-37deg);
+        display: inline-block;
+        position: absolute;
+        left: -22px;
+        width: 45px;
+        height: 25%;
+        background-color: #ffc107;
+    }
+    
+    #coming-games .result .col-12.bg-success .row.justify-content-center::after {
+        content: "E";
+        color: white;
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        font-size: 20px;
+        font-weight: 400;
+        background-color: transparent;
+    }
+    #coming-games .result .row.justify-content-center div.first-div p {
+        margin: 0;
+        text-align: center;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row {
+        text-transform: uppercase;
+        width: 100%;
+        position: relative;
+        padding: 10px 0px;
+        margin: 0px auto;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(1) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+        display: none;
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(2) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(3) {
+        text-transform: uppercase;
+        text-align: center;
+        width: 50%;
+
+    }
+    #coming-games .result .row.justify-content-center div.second-div div.row div.col:nth-of-type(4) {
+        text-transform: uppercase;
+        width: 50%;
+        text-align: center;
+        display: block;
+
+    }
+    #team #about img {
+        width: 100%;
+        padding: 0px;
+    }
+    
+    #team #about .about-div {
+        display: block;
+        background-color: rgba(224, 231, 33, .7);
+        width: 100%;
+        position: relative;
+        left: 0;
+        right: 0;
+        margin: 0px auto;
+        height: max-content;
+        align-content: center;
+        padding: 15px;
+    }
+    
+    #team #about .about-div p {
+        width: 100%;
+        margin: 20px 0px;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: justify;
+    }
+    
+    #team #about .about-div span {
+        border-top: 5px solid #258309;
+        padding: 0px;
+        font-weight: 400;
+    }
+    #team #about{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #coming-games{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #games{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #tournament{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #staff{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #team #stadium{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    #staff-info .col-12.mt-5 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

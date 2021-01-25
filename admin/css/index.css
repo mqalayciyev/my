@@ -1,0 +1,22 @@
+.context{
+    background-image: url("../img/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.context .rounded{
+    background-color: rgba(0, 0, 0, 0.703);
+}
+.close{
+    cursor: pointer;
+}
+.alert{
+    transition: all 0.5s;
+    opacity: 1;
+
+}
+
+.alert{
+    display: none;
+}

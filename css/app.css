@@ -1,0 +1,424 @@
+/* 
+
+        STANDART STYLE
+
+
+*/
+
+
+/* IMPORT */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,700;0,900;1,400;1,700;1,900&display=swap');
+@font-face {
+    font-family: "Proxima Nova";
+    src: url(../webfonts/ProximaNova-Regular.woff);
+}
+
+
+/* IMPORT */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* UMUMI FONT STYLE */
+
+* {
+    font-family: "Poppins";
+    font-weight: 300;
+    box-sizing: border-box;
+}
+
+
+/* UMUMI FONT STYLE */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* SCROLLBAR ---> */
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: slategray;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: silver;
+}
+
+
+/* <--- SCROLLBAR */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* IMG VIEW --->  */
+
+#img-view {
+    user-select: none;
+    margin: 0;
+    padding: 0;
+    z-index: 2;
+    position: fixed;
+    display: none;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.773);
+}
+
+#img-view img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+#img-view span {
+    color: white;
+    opacity: 0.2;
+    font-size: 50px;
+    z-index: 0;
+}
+
+#img-view span:hover {
+    color: white;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#img-view #close {
+    font-size: 40px;
+    position: absolute;
+    color: white;
+    opacity: 0.2;
+    left: 48%;
+    top: 0;
+}
+
+#img-view #close:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#img-view span:nth-of-type(1) {
+    position: absolute;
+    left: 0;
+    top: 43%;
+}
+
+#img-view span:nth-of-type(2) {
+    position: absolute;
+    right: 0px;
+    top: 43%;
+}
+
+
+/* <--- IMG VIEW */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* MY CLASS ---> */
+
+h2.header-group {
+    font-weight: 900;
+    font-size: 50px;
+    text-transform: uppercase;
+    font-family: "Poppins";
+    color: white;
+    text-shadow: 3px 3px 2px #028b30, -1px -1px 1px #028b30, -1px 1px 1px #028b30, 1px -1px 1px #028b30;
+}
+
+h2.header-group-logo {
+    font-size: 40px;
+    word-spacing: 5px;
+    font-weight: 400;
+    color: white;
+    text-shadow: none;
+}
+
+.bg-light {
+    background-color: rgb(233, 231, 231) !important;
+}
+
+h2.header-group-200 {
+    font-size: 50px;
+    font-weight: 500;
+    color: #028b30!important;
+}
+
+h2.header-group-small {
+    font-size: 35px;
+}
+
+.btn-outline-green {
+    border: 3px solid #028b30!important;
+    font-size: 20px;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.btn-outline-green:hover{
+    background-color: #028b30!important;
+}
+
+.btn-small {
+    font-size: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.btn-small:hover{
+    background-color: #028b30!important;
+}
+
+.btn-normal {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.btn-normal:hover a {
+    color: white;
+}
+
+.btn-large {
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.btn-large:hover a {
+    color: white;
+}
+
+.pagination, .pagination .page-item{
+    z-index: 0;
+}
+
+
+/* LOADING STYLE ---> */
+
+.loading {
+    background-color: white;
+}
+
+
+/* <--- LOADING STYLE */
+
+
+/* <--- MY CLASS */
+
+
+/* ------------------------------------------------------------------------------------------ */
+
+
+/* 404.php STYLE ----> */
+
+.not-found {
+    min-height: 450px;
+}
+
+.not-found h1 {
+    font-size: 600%;
+    font-weight: bolder;
+}
+
+.not-found .d-block:last-child p {
+    width: 60%;
+}
+
+.not-found .btn {
+    border-width: 0.1em;
+    border-color: #028b30;
+    color: #028b30;
+}
+.not-found .btn a{
+    color: #028b30;
+}
+
+.not-found .btn:hover {
+    color: white;
+    background-color: #028b30;
+}
+.not-found .btn:hover a{
+    color: white;
+}
+
+.not-found .btn a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+    .not-found p {
+        width: 100%;
+    }
+}
+
+
+/* <--- 404.php STYLE */
+
+@media only screen and (min-width: 1200px) {
+    h2.header-group {
+        font-weight: 900;
+        font-size: 50px;
+        text-transform: uppercase;
+        font-family: "Poppins";
+        color: white;
+        text-shadow: 3px 3px 2px #028b30, -1px -1px 1px #028b30, -1px 1px 1px #028b30, 1px -1px 1px #028b30;
+    }
+    h2.header-group-logo {
+        font-size: 40px;
+        word-spacing: 5px;
+        font-weight: 400;
+        color: white;
+        text-shadow: none;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    h2.header-group {
+        font-weight: 900;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: "Poppins";
+        color: white;
+        text-shadow: 3px 3px 2px #028b30, -1px -1px 1px #028b30, -1px 1px 1px #028b30, 1px -1px 1px #028b30;
+    }
+    h2.header-group-logo {
+        font-size: 34px;
+        word-spacing: 4px;
+        font-weight: 400;
+        color: white;
+        /* position: relative;
+        top: 5px; */
+        text-shadow: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    h2.header-group {
+        font-weight: 900;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: "Poppins";
+        color: white;
+        text-shadow: 3px 3px 2px #028b30, -1px -1px 1px #028b30, -1px 1px 1px #028b30, 1px -1px 1px #028b30;
+    }
+    h2.header-group-logo {
+        font-size: 40px;
+        word-spacing: 4px;
+        font-weight: 400;
+        color: white;
+        position: relative;
+        top: 5px;
+        text-shadow: none;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    h2.header-group {
+        font-weight: 900;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: "Poppins";
+        color: white;
+        text-shadow: 3px 3px 2px #028b30, -1px -1px 1px #028b30, -1px 1px 1px #028b30, 1px -1px 1px #028b30;
+    }
+    h2.header-group-logo {
+        font-size: 40px;
+        word-spacing: 4px;
+        font-weight: 400;
+        color: white;
+        position: relative;
+        top: 5px;
+        text-shadow: none;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    h2.header-group-logo {
+        font-size: 38px;
+        word-spacing: 5px;
+        font-weight: 400;
+        color: white;
+        margin: 0;
+        vertical-align: middle;
+        text-shadow: none!important;
+    }
+    h2.header-group {
+        font-weight: 900;
+        font-size: 40px;
+        text-transform: uppercase;
+        font-family: "Poppins";
+        color: white;
+        text-shadow: 3px 3px 2px #028b30, -1px -1px 1px #028b30, -1px 1px 1px #028b30, 1px -1px 1px #028b30;
+
+    }
+    .btn-outline-success{
+        width: 90%;
+    }
+    .paginations button {
+        width: max-content;
+        height: max-content;
+        padding: 3px 20px;
+        border-radius: 20px;
+        margin-left: 13px;
+        margin-right: 13px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        background-color: #ffc107;
+        transition: all 0.5s;
+        box-shadow: 4px 4px 10px #258309, -4px 4px 10px #258309, 4px -4px 10px #258309, -4px -4px 10px #258309;
+        color: #258309;
+    }
+    .paginations button:active,
+    .paginations button:hover,
+    .paginations button.btn-active {
+        width: max-content;
+        height: max-content;
+        padding: 3px 30px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        background-color: #258309;
+        box-shadow: 4px 4px 10px #ffc107, -4px 4px 10px #ffc107, 4px -4px 10px #ffc107, -4px -4px 10px #ffc107;
+        text-shadow: 4px 4px 10px #ffc107, -4px 4px 10px #ffc107, 4px -4px 10px #ffc107, -4px -4px 10px #ffc107;
+        color: #ffc107;
+    }
+}

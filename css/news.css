@@ -1,0 +1,154 @@
+/* 
+
+        NEWS.PHP STYLE
+
+
+*/
+
+
+/* NEWS PAGE STYLE ---> */
+
+.context-div .news {
+    padding-left: 80px!important;
+    padding-right: 80px!important;
+    background-color: rgb(240, 241, 241);
+}
+
+.context-div .news .news-div div {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.651);
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    color: white;
+    font-size: 100%;
+    transition: all 0.5s;
+}
+
+.context-div .news .news-div div span {
+    position: absolute;
+    top: -32px;
+    left: 24px;
+    background-color: #017a2a;
+    padding: 5px;
+}
+
+.context-div .news .row.justify-content-center {
+    column-gap: 2%;
+}
+
+.context-div .news .news-div {
+    width: 49%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.context-div .news .news-div:hover div {
+    background-color: rgba(0, 0, 0, 0.81);
+}
+
+.context-div .news .news-div div p:last-child {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.context-div .news .news-div img {
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.context-div .news .news-div:hover img {
+    transform: scale(1.1);
+}
+
+
+/* <--- NEWS PAGE STYLE */
+
+@media only screen and (min-width: 1200px) {
+    .context-div .news {
+        padding-left: 80px!important;
+        padding-right: 80px!important;
+        background-color: rgb(240, 241, 241);
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .context-div .news {
+        padding-left: 80px!important;
+        padding-right: 80px!important;
+        background-color: rgb(240, 241, 241);
+    }
+    .context-div .news .news-div h4 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .context-div .news {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+        background-color: rgb(240, 241, 241);
+    }
+    .context-div .news .news-div h4 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .context-div .news {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+        background-color: rgb(240, 241, 241);
+    }
+    .context-div .news .news-div {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .context-div .news .news-div h4 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .context-div .news .news-div div p:last-child {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .context-div .news {
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+        background-color: rgb(240, 241, 241);
+    }
+    .context-div .news .news-div {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    .context-div .news .news-div div p:last-child {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+    .context-div .news .news-div h4 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+    }
+}

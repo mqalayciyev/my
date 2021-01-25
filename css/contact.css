@@ -1,0 +1,165 @@
+/* 
+
+        CONTACT.PHP STYLE
+
+
+*/
+/* CONTACT STYLE ---> */
+
+.contact .form-section {
+    padding-left: 65px;
+}
+
+.contact .addresbar{
+    background-color: #028b30;
+}
+.contact .btn-new {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.contact .btn-new p {
+    z-index: 0;
+}
+
+.contact .btn-new span {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    z-index: 0;
+    border: 2px solid white;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+.contact .style .row.justify-content-center .col-12:hover .btn-new span {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    border: 2px solid white;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.contact .style .row.justify-content-center .col-12:hover .btn-new p {
+    color: #028b30;
+}
+
+.contact .style .row.justify-content-center .col-12:hover {
+    cursor: pointer;
+}
+
+.contact .btn-new p {
+    font-size: 40px;
+    color: white;
+}
+
+.contact .style p.col-12 {
+    cursor: text;
+    color: white;
+}
+
+.contact h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact input[name="name"],
+.contact input[type="email"] {
+    height: 60px;
+}
+
+.contact textarea[name="text"] {
+    height: 100%;
+    max-height: 180px;
+    min-height: 180px;
+}
+
+.contact input[type="submit"] {
+    padding: 10px auto;
+    font-size: 20px;
+    border: 3px solid #028b30;
+    background-color: transparent;
+    color: #028b30!important;
+    border-radius: 10px;
+}
+.contact input[type="submit"]:hover {
+    border: 3px solid #028b30;
+    
+    background-color: #028b30!important;
+    background-color: transparent;
+    color: #fff!important;
+}
+
+.contact mask {
+    color: red;
+    background-color: transparent;
+}
+
+.mapouter {
+    position: relative;
+    text-align: right;
+}
+
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+}
+
+
+/* <--- CONTACT STYLE */
+
+@media only screen and (min-width: 1200px) {
+    .contact .form-section {
+        padding-left: 65px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199) {
+    .contact .form-section {
+        padding-left: 65px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .contact .form-section {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .contact .form-section {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .contact .form-section {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}

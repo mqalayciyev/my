@@ -1,0 +1,204 @@
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: slategray;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: silver;
+  }
+  body{
+      overflow: hidden;
+  }
+  .header-group {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-weight: 900;
+    margin: 10px 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 200%;
+    text-transform: uppercase;
+    color: #258309;
+    text-shadow: 2px 2px 2px #ffc107;
+  }
+
+.nav-div{
+    background-color: #222529;
+    max-width: 280px;
+    max-height: max-content;
+    position: sticky;
+    overflow: auto;
+    padding: 0!important;
+}
+.nav-div.ng-hide{
+    padding: 0px!important;
+    margin: 0!important;
+    max-width: 0px;
+}
+.nav-div ul{
+    padding: 0px;
+    align-content: start;
+}
+
+.nav-div ul li{
+    margin: 5px 0px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    list-style: none;
+    width: 100%;
+}
+.nav-div ul li label{
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#dropdown-div{
+    transition: all 0.4s;
+    height: 0px;
+    overflow: auto;
+    margin: 0px;
+    padding: 0px;
+}
+#dropdown-div li a{
+    font-weight: 400;
+}
+.nav-div ul li a{
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.nav-div ul li a:hover{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+.page {
+    height: 100%;
+    min-height: 100vh;
+}
+.page-header{
+    background-color: #222529;
+}
+
+.page-header div span{
+    padding: 10px 10px;
+}
+
+.page-header div span a, .page-header div span i{
+    color: white;
+}
+.page-header div span a:hover, .page-header div span i:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.681);
+}
+
+.page .col-12.page-body{
+    height: 100vh;
+    overflow: auto;
+}
+
+.fas.fa-bars{
+    cursor: pointer;
+}
+
+[class*="fa-angle-"]{
+    vertical-align: middle;
+}
+
+.page-header .photo {
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  
+.page-header .photo img {
+    width: 100%;
+  }
+  .page-header .caret {
+    position: absolute;
+    left: 80%;
+    top: 55%;
+    margin-left: 0;
+  }
+  .page-header .dropdown {
+    margin: 5px 0;
+  }
+
+  .page-header .dropdown .nav-link {
+    padding-bottom: 0;
+  }
+  .page-header .dropdown .dropdown-menu {
+    transition: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: auto;
+    margin-top: 1rem;
+    margin-right: 2.5rem;
+  }
+
+  .page-header .dropdown .dropdown-menu .dropdown-item {
+    margin-top: 0;
+    padding-left: 24px;
+  }
+
+
+
+  .page-header .dropdown-menu .dropdown-item:focus,
+  .page-header .dropdown-menu .dropdown-item:hover {
+    color: #ffffff;
+  }
+
+  .page-header .dropdown-menu .dropdown-item:focus,
+  .page-header .dropdown-menu .dropdown-item:hover {
+    color: #344675;
+  }
+  .info-box {
+      border-radius: 5px;
+  }
+  .info-box .info-box-icon {
+    border-radius: 0.25rem;
+    align-items: center;
+    display: flex;
+    font-size: 1.875rem;
+    justify-content: center;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    box-shadow: 1px 1px 4px silver, -1px -1px 4px silver, -1px 1px 4px silver, 1px -1px 4px silver;
+  }
+  .info-box .info-box-content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: center;
+    justify-content: center;
+    line-height: 1.8;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 0 10px;
+  }
+  
+  .info-box .info-box-number {
+    display: block;
+    margin-top: .25rem;
+    font-weight: 700;
+  }

@@ -1,0 +1,83 @@
+/* 
+
+        GALERI.PHP STYLE
+
+
+*/
+
+
+/*  GALERI PAGE STYLE --->*/
+
+.galeri {
+    padding-left: 75px;
+    padding-right: 75px;
+}
+
+.galeri div.card {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.galeri img {
+    transition: all 1s;
+    user-select: none;
+}
+
+.galeri img:hover {
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+}
+
+
+/* <--- GALERI PAGE STYLE */
+
+@media only screen and (min-width: 1200px) {
+    .galeri {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    .galeri .card-columns{
+        column-count: 4;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .galeri {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    .galeri .card-columns{
+        column-count: 4;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .galeri {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .galeri .card-columns{
+        column-count: 2;
+    }
+    
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .galeri {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .galeri .card-columns{
+        column-count: 2;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .galeri {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .galeri .card-columns{
+        column-count: 1;
+    }
+}

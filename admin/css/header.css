@@ -1,0 +1,9 @@
+#photos .row.justify-content-around .col{
+    max-width: 250px;
+    min-width: 250px;
+    margin: 5px;
+}
+
+#photos span{
+    cursor: pointer;
+}

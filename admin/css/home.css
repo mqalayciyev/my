@@ -1,0 +1,23 @@
+#home .navbar-div .list-inline-item{
+    font-size: 20px;
+}
+#home .navbar-div .list-inline-item:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+#home .navbar-div .list-inline-item a{
+    color: white;
+}
+#home .navbar-div .list-inline-item a:hover{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.681);
+}
+
+#home .row.justify-content-around .col{
+    max-width: 250px;
+    min-width: 250px;
+    margin: 5px;
+}
+#home span{
+    cursor: pointer;
+}
