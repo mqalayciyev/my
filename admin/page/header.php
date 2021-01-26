@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
+
+?>
 <div class="row header">
     <div class="col-12 px-4 pb-4 mb-4">
         <div class="row">
@@ -9,7 +15,7 @@
                         echo '<div class="alert alert-danger col-12">'.$_SESSION['error'].'</div>';
                         unset($_SESSION['error']);
                     }
-                    else if(isset($_SESSION['success'])){
+                    elseif(isset($_SESSION['success'])){
                         echo '<div class="alert alert-success col-12">'.$_SESSION['success'].'</div>';
                         unset($_SESSION['success']);
                     }

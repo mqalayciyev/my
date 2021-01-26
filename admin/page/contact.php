@@ -1,4 +1,9 @@
 <?php
+
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
+
 $sql = "SELECT * FROM `contact`";
 $response = mysqli_fetch_assoc(mysqli_query($conn, $sql));
 $action = "add_contact_info";

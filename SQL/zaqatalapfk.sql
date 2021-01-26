@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 13 Oca 2021, 13:36:17
+-- Üretim Zamanı: 26 Oca 2021, 21:02:59
 -- Sunucu sürümü: 8.0.21
 -- PHP Sürümü: 7.4.9
 
@@ -71,27 +71,6 @@ INSERT INTO `admin` (`id`, `username`, `email`, `password`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `coming_games`
---
-
-DROP TABLE IF EXISTS `coming_games`;
-CREATE TABLE IF NOT EXISTS `coming_games` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `liqa` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `stadium` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `gorus` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
-  `tarix` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `team_1` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `team_1_logo` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `team_2` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `team_2_logo` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `status` int NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Tablo için tablo yapısı `contact`
 --
 
@@ -148,15 +127,17 @@ CREATE TABLE IF NOT EXISTS `galeri` (
   `tarix` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `galeri`
 --
 
 INSERT INTO `galeri` (`id`, `image`, `video`, `tarix`, `status`) VALUES
-(1, 'img1.jpeg', '', '2021-01-06 21:05:03', 1),
-(2, 'img2.jpeg', '', '2021-01-06 21:08:59', 0);
+(3, 'img3.jpeg', '', '2021-01-23 09:18:48', 1),
+(4, 'img4.jpeg', '', '2021-01-23 09:19:00', 1),
+(5, 'img5.jpeg', '', '2021-01-23 09:19:18', 1),
+(6, 'img6.jpeg', '', '2021-01-23 09:19:34', 1);
 
 -- --------------------------------------------------------
 
@@ -167,19 +148,30 @@ INSERT INTO `galeri` (`id`, `image`, `video`, `tarix`, `status`) VALUES
 DROP TABLE IF EXISTS `games`;
 CREATE TABLE IF NOT EXISTS `games` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `liqa` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `tarix` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `oyun` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `stadium` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `gorus` varchar(5) COLLATE utf8mb4_general_ci NOT NULL,
-  `stadium` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `tarix` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
+  `hefte` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
   `team_1` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `team_1_logo` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `team_1_qol` int NOT NULL,
+  `team_1_qol` int DEFAULT NULL,
+  `team_1_logo` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `team_2` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `team_2_logo` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `team_2_qol` int NOT NULL,
+  `team_2_qol` int DEFAULT NULL,
+  `team_2_logo` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `oyun_status` int NOT NULL DEFAULT '0',
+  `qeyd` int NOT NULL DEFAULT '0',
   `status` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `games`
+--
+
+INSERT INTO `games` (`id`, `oyun`, `stadium`, `gorus`, `tarix`, `hefte`, `team_1`, `team_1_qol`, `team_1_logo`, `team_2`, `team_2_qol`, `team_2_logo`, `oyun_status`, `qeyd`, `status`) VALUES
+(1, 'Azerbaycan Kuboku', 'Bakcell Arena', 'E', '2021-01-15T14:51', '5', 'Zaqatalapfk', 2, 'zaqatalapfk.png', 'Moik', 2, 'moik.png', 1, 1, 1),
+(13, 'Azerbaycan Kuboku', 'Bayil Arena', 'S', '2021-01-20T18:30', '3', 'Sumqayit', NULL, 'sumqayit.png', 'Zaqatalapfk', NULL, 'zaqatalapfk.png', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -193,7 +185,15 @@ CREATE TABLE IF NOT EXISTS `header` (
   `image` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `status` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `header`
+--
+
+INSERT INTO `header` (`id`, `image`, `status`) VALUES
+(12, 'img1.jpeg', 1),
+(14, 'img2.jpeg', 1);
 
 -- --------------------------------------------------------
 
@@ -208,7 +208,7 @@ CREATE TABLE IF NOT EXISTS `home` (
   `image` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `status` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `home`
@@ -216,7 +216,11 @@ CREATE TABLE IF NOT EXISTS `home` (
 
 INSERT INTO `home` (`id`, `kategori`, `image`, `status`) VALUES
 (1, 'fotoalbom', 'img1.jpeg', 0),
-(2, 'fotoalbom', 'img2.jpeg', 1);
+(2, 'fotoalbom', 'img2.jpeg', 1),
+(3, 'fotoalbom', 'img3.jpeg', 0),
+(4, 'fotoalbom', 'img4.jpeg', 0),
+(5, 'fotoalbom', 'img5.jpeg', 0),
+(6, 'fotoalbom', 'img6.jpeg', 0);
 
 -- --------------------------------------------------------
 
@@ -227,12 +231,28 @@ INSERT INTO `home` (`id`, `kategori`, `image`, `status`) VALUES
 DROP TABLE IF EXISTS `mail`;
 CREATE TABLE IF NOT EXISTS `mail` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `ad_sayod` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `name` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `subject` text COLLATE utf8mb4_general_ci NOT NULL,
   `email` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `text` text COLLATE utf8mb4_general_ci NOT NULL,
+  `send` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `text` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `type` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
+  `mainly_type` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `moving` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `tarix` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` int DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `mail`
+--
+
+INSERT INTO `mail` (`id`, `name`, `subject`, `email`, `send`, `text`, `type`, `mainly_type`, `moving`, `tarix`, `status`) VALUES
+(4, 'Mehemmed Qalayciyev', '', 'qalayciyev@gmail.com', '', 'Salam Zaqatala PFK', 'inbox', 'inbox', 'inbox', '2021-01-20 12:13:11', 1),
+(5, 'Mehemmed Qalayciyev', '', 'qalayciyev@gmail.com', '', 'Salam Zaqatala PFK', 'inbox', 'inbox', 'inbox', '2021-01-20 12:14:04', 0),
+(6, 'Mehemmed Qalayciyev', '', 'qalayciyev@gmail.com', '', 'Salam Zaqatala PFK.', 'inbox', 'inbox', 'inbox', '2021-01-20 12:15:18', 0),
+(7, 'Ramazan Qalayciyev', '', 'rqalayciyev@gmail.com', '', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', 'inbox', 'inbox', 'inbox', '2021-01-20 12:39:38', 0);
 
 -- --------------------------------------------------------
 
@@ -327,7 +347,7 @@ CREATE TABLE IF NOT EXISTS `team` (
   `youtube` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `status` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `team`
@@ -335,7 +355,8 @@ CREATE TABLE IF NOT EXISTS `team` (
 
 INSERT INTO `team` (`id`, `name`, `nomre`, `avatar`, `movqe`, `date`, `country`, `instagram`, `facebook`, `twitter`, `youtube`, `status`) VALUES
 (1, 'İsrail Həmzəyev', 0, 'İsrail Həmzəyev.jpeg', 'admin', '2021-01-13', 'Azerbaycan', 'İnstagram', 'Faceboook', 'Twitter', 'Youtube', 1),
-(3, 'Roini İsmayılov', 8, 'Roini İsmayılov.jpeg', 'midfielder', '2021-01-13', 'Azerbaycanə', 'İnstagram', 'Faceboook', 'Twitter', 'Youtube', 1);
+(3, 'Roini İsmayılov', 8, 'Roini İsmayılov.jpeg', 'midfielder', '2021-01-13', 'Azerbaycan', 'İnstagram', 'Faceboook', 'Twitter', 'Youtube', 1),
+(6, 'Eldar Tərlanov', 12, 'Eldar Tərlanov.jpeg', 'doorman', '2000-01-01', 'Azərbaycan', 'İnstagram', 'Faceboook', 'Twitter', 'Youtube', 1);
 
 -- --------------------------------------------------------
 
@@ -378,24 +399,62 @@ INSERT INTO `turnir` (`id`, `url`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tablo için tablo yapısı `visitors`
+--
+
+DROP TABLE IF EXISTS `visitors`;
+CREATE TABLE IF NOT EXISTS `visitors` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `ip` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `tarayici` varchar(150) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `host` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `geldigi_adres` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `tarayici_dili` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `sunucu_protokolu` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `karakter_seti` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `istek_metodu` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `uzak_port` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `proxy_ip` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `cookie` varchar(150) COLLATE utf8mb4_general_ci NOT NULL,
+  `tarix` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=443 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Tablo döküm verisi `visitors`
+--
+
+INSERT INTO `visitors` (`id`, `ip`, `tarayici`, `host`, `geldigi_adres`, `tarayici_dili`, `sunucu_protokolu`, `karakter_seti`, `istek_metodu`, `uzak_port`, `proxy_ip`, `cookie`, `tarix`) VALUES
+(436, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Safari/537.36 Edg/88.0.705.50', 'DESKTOP-J5GRGBH', 'http://localhost/start/zaqatalapfk/index.php', 'tr,en;q=0.9,en-GB;q=0.8,en-US;q=0.7', 'HTTP/1.1', 'empty', 'GET', '58455', 'empty', 'PHPSESSID=nmqqekldvg1v9nfri31loooc14; ip=%3A%3A1', '2021-01-26 06:53:38'),
+(437, '::1', 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile Safari/537.36 Edg/88.0.705.5', 'DESKTOP-J5GRGBH', 'http://localhost/start/zaqatalapfk/', 'tr,en;q=0.9,en-GB;q=0.8,en-US;q=0.7', 'HTTP/1.1', 'empty', 'GET', '61624', 'empty', 'ip=%3A%3A1; PHPSESSID=ajkr9ocd119jsgmkfhl0kbgs40', '2021-01-26 16:06:09'),
+(438, '::1', 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile Safari/537.36 Edg/88.0.705.5', 'DESKTOP-J5GRGBH', 'empty', 'tr,en;q=0.9,en-GB;q=0.8,en-US;q=0.7', 'HTTP/1.1', 'empty', 'GET', '55007', 'empty', 'ip=%3A%3A1; PHPSESSID=ajkr9ocd119jsgmkfhl0kbgs40', '2021-01-26 20:01:07'),
+(439, '::1', 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile Safari/537.36 Edg/88.0.705.5', 'DESKTOP-J5GRGBH', 'empty', 'tr,en;q=0.9,en-GB;q=0.8,en-US;q=0.7', 'HTTP/1.1', 'empty', 'GET', '55047', 'empty', 'ip=%3A%3A1; PHPSESSID=ajkr9ocd119jsgmkfhl0kbgs40', '2021-01-26 20:01:53'),
+(440, '::1', 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile Safari/537.36 Edg/88.0.705.5', 'DESKTOP-J5GRGBH', 'empty', 'tr,en;q=0.9,en-GB;q=0.8,en-US;q=0.7', 'HTTP/1.1', 'empty', 'GET', '55173', 'empty', 'ip=%3A%3A1; PHPSESSID=ajkr9ocd119jsgmkfhl0kbgs40', '2021-01-26 20:03:26'),
+(441, '::1', 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile Safari/537.36 Edg/88.0.705.5', 'DESKTOP-J5GRGBH', 'empty', 'tr,en;q=0.9,en-GB;q=0.8,en-US;q=0.7', 'HTTP/1.1', 'empty', 'GET', '55302', 'empty', 'ip=%3A%3A1; PHPSESSID=ajkr9ocd119jsgmkfhl0kbgs40', '2021-01-26 20:06:58'),
+(442, '::1', 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.96 Mobile Safari/537.36 Edg/88.0.705.5', 'DESKTOP-J5GRGBH', 'empty', 'tr,en;q=0.9,en-GB;q=0.8,en-US;q=0.7', 'HTTP/1.1', 'empty', 'GET', '55331', 'empty', 'ip=%3A%3A1; PHPSESSID=ajkr9ocd119jsgmkfhl0kbgs40', '2021-01-26 20:07:28');
+
+-- --------------------------------------------------------
+
+--
 -- Tablo için tablo yapısı `zaqatalatv`
 --
 
 DROP TABLE IF EXISTS `zaqatalatv`;
 CREATE TABLE IF NOT EXISTS `zaqatalatv` (
   `id` int NOT NULL AUTO_INCREMENT,
+  `basliq` text COLLATE utf8mb4_general_ci NOT NULL,
   `video` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` int NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Tablo döküm verisi `zaqatalatv`
 --
 
-INSERT INTO `zaqatalatv` (`id`, `video`, `date`, `status`) VALUES
-(1, 'video1.mp4', '2021-01-06 20:36:24', 1);
+INSERT INTO `zaqatalatv` (`id`, `basliq`, `video`, `date`, `status`) VALUES
+(5, 'I Divizion, 2015 2016 mövsümü, XVII tur, \'Zaqatala\' 6 0 \'Energetik\'', 'video2.mp4', '2021-01-26 20:58:48', 1);
 
 --
 -- Dökümü yapılmış tablolar için kısıtlamalar

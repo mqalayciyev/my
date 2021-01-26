@@ -1,33 +1,5 @@
 const div = document.getElementsByClassName("loading")[0].firstElementChild;
 const search = document.getElementsByClassName("loading")[0].firstElementChild;
-const headerIMG = () => {
-	let headerDiv = $("#header");
-	let image_list = sessionStorage.getItem("image_list");
-	if(image_list == null){
-		$.ajax({
-			url: "inc/data.php",
-			method: "POST",
-			data: "query=header",
-			success: function (data) {
-				sessionStorage.setItem("image_list", data);
-				let image_list = $.parseJSON(data);
-				headerDiv.css(
-					"background-image",
-					"url('./media/header/" + image_list[0] + "')"
-				);
-			},
-		});
-	}
-	else{
-		image_list = $.parseJSON(image_list);
-		headerDiv.css(
-			"background-image",
-			"url('./media/header/" + image_list[0] + "')"
-		);
-	}
-};
-
-headerIMG()
 
 div.style.height = window.innerHeight + "px";
 search.style.height = window.innerHeight + "px";
@@ -72,24 +44,37 @@ $(document).ready(function () {
 		}
 	}
 	// -------------------------------------------------------------------------------------
-
-	let image_list = sessionStorage.getItem("image_list");
-	image_list = $.parseJSON(image_list);
-	let x = 0;
-	let headerDiv = $("#header");
-	function nextImg() {
-
-		headerDiv.css("opacity", "0.5");
-		x++;
-		if (x == image_list.length) {
-			x = 0;
-		}
-		headerDiv.css(
-			"background-image",
-			"url('./media/header/" + image_list[x] + "')"
-		);
-		headerDiv.css("opacity", "1");
+	function imgList() {
+		var keyValue = "";
+		$.ajax({ 
+			async: false,
+			type: "POST", 
+			url: "inc/data.php", 
+			data: "query=header",
+			success: function (response) { 
+				keyValue = response;
+			}
+			
+		}); 
+		return keyValue; 
 	}
+	let image_list = $.parseJSON(imgList());
+	let carousel_inner = $("#carouselExampleCaptions").find(".carousel-inner");
+	let div = ""
+	let active = "active";
+	for(let i = 0; i<image_list.length; i++){
+		div += `<div class="carousel-item ${active} w-100 h-100" style="background: url('media/header/${image_list[i]}')"></div>`;
+		active = null
+	}
+	$(carousel_inner).html(div)
+	$("#carouselExampleCaptions")
+		.find(".carousel-inner")
+		.find(".carousel-item")
+		.css("background-repeat", "no-repeat")
+		.css("background-position-x", "center")
+		.css("background-position-y", "30%")
+		.css("background-size", "cover")
+
 	// -------------------------------------------------------------------------------------
 	function imgView() {
 		$("#img-view").css("width", window.innerWidth + "px");
@@ -240,7 +225,6 @@ $(document).ready(function () {
 	rightNavbar();
 	imgSize();
 	imgView();
-	setInterval(nextImg, 3000);
 	imgHide();
 	imgShow();
 	footerMargin();
@@ -307,7 +291,8 @@ $(document).ready(function () {
 	$("#right-navbar")
 		.find("strong")
 		.click(function () {
-			if ($("#right-navbar").css("width") == "8px") {
+			console.log($("#right-navbar").css("width"));
+			if ($("#right-navbar").css("width") !== "200px") {
 				$("#right-navbar").css("width", "200px");
 				$("#right-navbar").find(".row").css("visibility", "visible");
 				$("#right-navbar").find("strong").html("<");
@@ -395,16 +380,16 @@ $(document).ready(function () {
 					.css("transition", "none")
 					.css("visibility", "hidden");
 				$("#right-navbar").find("strong").css("transition", "none");
+				$("#right-navbar").find(".row").css("display", "none");
 			} else {
 				$("#right-navbar")
 					.css("visibility", "visible")
 					.css("transition", "all 1s");
 				$("#right-navbar").find("strong").css("transition", "all 1s");
+				$("#right-navbar").find(".row").css("display", "flex");
 			}
 		}
-		// CALLBACK
-		// rightNavbarPosition()
-		// CALLBACK
+		
 		if ($(window).outerWidth() > 991) {
 			if (
 				$(window).scrollTop() >=
@@ -503,7 +488,9 @@ $(document).ready(function () {
 	}
 	
 
+	
 	$(".loading").css("display", "none");
+
 
 	if (location.href.indexOf("page=team") && idC != undefined) {
 		scrollTeamPage(idC);

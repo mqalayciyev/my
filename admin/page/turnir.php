@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
+
+?>
 <div id="about" class="row">
     <div class="col-12 py-3 mb-5">
         <h2>Turnir cedveli URL adresleri</h2>

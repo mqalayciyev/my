@@ -18,38 +18,46 @@ if(!isset($_GET['page']) && $_GET['page'] !== "search"){
                 </div>
             </div>
         </form>
+        <?php
+        $search = $_GET['search'];
+        $sql = "";
+        $count = 0;
+        if(trim($search) !== ""){
+            $sql = "SELECT * FROM `news` WHERE `status` = 1 AND `basliq` LIKE '%$search%' OR `metn` LIKE '%$search%' OR `tarix` LIKE '%$search%'";
+            $query = mysqli_query($conn, $sql);
+            $count = mysqli_num_rows($query);
+        }
+        
+        ?>
 
-        <h3 class="my-4">2 Nəticə "<?=$_GET['search']?>"</h3>
+        <h3 class="my-4"><?=$count?> Nəticə "<?=$_GET['search']?>"</h3>
 
         <div class="w-100 results">
+            <?php
+                if(isset($query)){
+                    while($res = mysqli_fetch_assoc($query)){
+                        $id = $res['id'];
+                        $tarix = $res['tarix'];
+                        echo '<div class="col-12  my-3">
+                        <div class="row bg-white h-100">
+                            <div class="col-12 col-xl-3 px-0">
+                                <img src="media/news/'.$res['image'].'" class="w-100" alt="'.$res['image'].'">
+                            </div>
+                            <div class="col-12 col-xl-9 align-self-center">
+                                <a href="index.php?page=news&id='.$id.'"><h4>'.$res['basliq'].'</h4></a>
+                                <p>'.$res['metn'].'</p>
+                                <span>'.$tarix.' | Xəbərlər</span>
+        
+                            </div>
+                        </div>
+                    </div>';
+                    }
+                }
+                
+            
+            ?>
 
-            <div class="col-12  my-3">
-                <div class="row bg-white h-100">
-                    <div class="col-12 col-xl-3 px-0">
-                        <img src="img/news/img0.jpg" class="w-100" alt="">
-                    </div>
-                    <div class="col-12 col-xl-9 align-self-center">
-                        <h4>"Onsuz da, “Zaqatala” hər mövsüm əziyyət çəkir"</h4>
-                        <p>“Bütün komandalar kimi, biz də sentyabrın əvvəlindən bir araya gəlmişik“. Sportinfo.az xəbər verir ki, bu sözlər “Zaqatala“nın baş məşqçisi Rüstəm Məmmədova məxsusdur. I Divizion təmsilçisinin çalışdırıcı bildirib ki, toplanışın ilk iki həftəsində daha çox seleksiyaya diqqət ayırıblar: “Tətbiq olunan limit bizə çox çətinlik yaradır. “Zaqatala”nın U-19 komandası olmadığından U-17-dən bəzi oyunçuları sıralarımıza dəvət etdik. Baxışa gələnləri də sınaqdan keçirdik. Artıq heyəti koplektləşdirmişik. Bu günə kimi yalnız bir yoxlama görüşü keçirmişik. “Qəbələ” ilə qarşılaşmışıq. Əslində, həmin oyunu heç sınaq matçı da adlandırmaq düz olmaz. Çünki biz U-19 komandası ilə oynamaq istəyirdik. Ancaq həmin vaxt “Qəbələ”nin həmin yaş qrupunun əksər üzvləri yığmanın toplanışına yollandığından bizə qarşı 16-17 yaşlı uşaqlar oynadı. Təbii ki, bu da istənilən effekti vermədi. Zaqatala bir qədər uzaq bölgə olduğundan yoxlama görüşü üçün rəqib tapmaqda çətinlik çəkirik. Əvvəlki illərdə bu boşluğu Gürcüstan komandalarının sayəsində aradan qaldıra bilirdik. Hər il qonşu ölkənin güclülər dəstəsində çıxış edən kollektivlərlə üz-üzə gəlirdik. Ancaq bu il pandemiya səbəbindən sərhədlər bağlı olduğundan ora yollana bilmədik. Əvəzində tez-tez ikitərəfli oyunlar keçirirdik. Bəli, hazırlıq dönəmində bir yoxlama görüşü keçirmək çox azdır. Ancaq başqa çarəmiz yoxdu. Onsuz da, “Zaqatala” hər il mövsümün əvvəlində 3-4 tur əziyyət çəkir. Sonradan formaya düşərək oyunumuzu tapırıq. Yəqin bu il də eyni aqibəti yaşayacağıq. Məqsədimiz mükafatçılar sırasında yer almaqdır”.</p>
-                        <span>28 Dekabr 2020 | Xəbərlər</span>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-12 my-3">
-                <div class="row bg-white h-100">
-                    <div class="col-12 col-xl-3 px-0">
-                        <img src="img/staff/men/male.jpg" class="w-100" alt="">
-                    </div>
-                    <div class="col-12 col-xl-9 align-self-center">
-                        <h4>Vüsal Şabanov</h4>
-                        <p>Mövqe / Qapıçı</p>
-                        <span>Heyət</span>
-
-                    </div>
-                </div>
-            </div>
+            
             
         </div>
     </div>

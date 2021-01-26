@@ -1,5 +1,9 @@
 <?php
 
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
+
 $action = (isset($_GET["page"]) && isset($_GET["action"]) && isset($_GET["id"])) ? "edit" : "add";
 
 $text = "";

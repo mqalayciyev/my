@@ -29,7 +29,7 @@ if(!isset($_GET['page']) && $_GET['page'] !== "team"){
 
     <div id="coming-games" class="col-12 py-5 bg-white">
         <h2 class="header-group col ">Gələcək oyunlar</h2>
-        <form>
+        <!-- <form>
             <div class="input-group col-12 ">
                 <select class="form-control col-12">
                     <option>---</option>
@@ -41,7 +41,7 @@ if(!isset($_GET['page']) && $_GET['page'] !== "team"){
                     <button type="button" class="btn btn-outline-success col-12 font-weight-bold">Göstər</button>
                 </div>
             </div>
-        </form>
+        </form> -->
         <div class="mt-4 result">
             <div class="result-div col-12">
             <?php
@@ -97,7 +97,7 @@ if(!isset($_GET['page']) && $_GET['page'] !== "team"){
                     $totalComingGamesPageNums = ceil(count($obj_coming_games)/$comingGamesPerPage);
                     if(count($currentComingGames) > 0){
                         for($i = 0; $i < count($currentComingGames); $i++){
-                            echo '<div class="col-12 bg-success position-relative">
+                            echo '<div class="col-12 bg-success position-relative mb-3">
                                 <div class="row justify-content-center">
                                     <span class="gorus">'.$currentComingGames[$i]['gorus'].'</span>
                                     <div class="col-12 col-md-4 first-div px-5 py-3">
@@ -135,7 +135,7 @@ if(!isset($_GET['page']) && $_GET['page'] !== "team"){
                     ?>
             </div>
             
-        <div class="col-12">
+        <div class="col-12 mt-4">
             <div class="row justify-content-center">
                 <nav aria-label="...">
                     <ul class="pagination">
@@ -163,7 +163,7 @@ if(!isset($_GET['page']) && $_GET['page'] !== "team"){
 
     <div id="games" class="col-12 py-5 my-0">
         <h2 class="header-group col  mb-4">Oyun Tarixçəsi</h2>
-        <form>
+        <!-- <form>
             <div class="input-group col-12">
                 <select class="form-control">
                     <option>-LIQA-</option>
@@ -181,7 +181,7 @@ if(!isset($_GET['page']) && $_GET['page'] !== "team"){
                     <button type="button" class="btn rounded-0 btn-outline-success col-12 font-weight-bold">Göstər</button>
                 </div>
             </div>
-        </form>
+        </form> -->
         <div class="mt-4 result">
             <div class="col-12">
                 <div class="result-div row justify-content-center card-divs" style="column-gap: 20px">
@@ -274,7 +274,7 @@ if(!isset($_GET['page']) && $_GET['page'] !== "team"){
             </div>
 
 
-        <div class="col-12">
+        <div class="col-12 mt-3">
             <div class="row justify-content-center">
                 <nav aria-label="...">
                     <ul class="pagination">
@@ -318,11 +318,11 @@ if(!isset($_GET['page']) && $_GET['page'] !== "team"){
                 <div class="row align-content-around">
                     <p class="col-12"><span aria-label="admin">Administrator</span></p>
                     <p class="col-12"><span aria-label="doctor">Həkim</span></p>
-                    <p class="col-12"><span aria-label="m-trainer">Məşqçilər</span></p>
-                    <p class="col-12"><span aria-label="m-goalkeeper">Qapıçı</span></p>
-                    <p class="col-12"><span aria-label="m-forwards">Hücumçular</span></p>
-                    <p class="col-12"><span aria-label="m-defenders">Müdafiəçilər</span></p>
-                    <p class="col-12"><span aria-label="m-midfielders">Yarım Müdafiəçilər</span></p>
+                    <p class="col-12"><span aria-label="trainer">Məşqçilər</span></p>
+                    <p class="col-12"><span aria-label="goalkeeper">Qapıçı</span></p>
+                    <p class="col-12"><span aria-label="forwards">Hücumçular</span></p>
+                    <p class="col-12"><span aria-label="defenders">Müdafiəçilər</span></p>
+                    <p class="col-12"><span aria-label="midfielders">Yarım Müdafiəçilər</span></p>
                 </div>
             </div>
 

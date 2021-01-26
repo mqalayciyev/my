@@ -10,7 +10,7 @@ if(!isset($_GET['page']) && !isset($_GET['player']) && preg_match($str, $URL) ==
 else{
     $sql = "SELECT * FROM `team` WHERE `id` = ".$_GET['player']." AND `status` = 1";
     $query = mysqli_query($conn, $sql);
-    
+    $movqe_arr = ['admin' => 'Administrator', 'doctor' => 'Həkim', 'trainer' => 'Məşqçi', 'doorman' => 'Qapıçı', 'forward' => 'Hücumçu', 'defender' => 'Müdafiəçi', 'midfielder' => 'Yarım Müdafiəçi'];
     if(mysqli_num_rows($query) === 0){
         $display = "d-none";
         require "404.php";
@@ -18,6 +18,8 @@ else{
     else{
         $display = "d-block";
         $team = mysqli_fetch_assoc($query);
+        $movqe = $movqe_arr[$team['movqe']];
+        
     }
 }
 ?>
@@ -25,7 +27,7 @@ else{
 
 <div id="staff-info" class="col-12 pt-3 pb-5 bg-white <?=$display?>">
     <div class="row justify-content-center h-100">
-        <img src=<?php echo "'media/staff/" .$team['movqe'] . "/" . $team['avatar']."'";?> alt="<?=$team['avatar']?>">
+        <img class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3" src=<?php echo "'media/staff/" .$team['movqe'] . "/" . $team['avatar']."'";?> alt="<?=$team['avatar']?>">
         <div class="col-12 col-md-7 col-lg-6 ml-md-3 ml-lg-5 align-self-center player-info-div h-100">
             <div class="row align-items-center h-100">
                 <div class="col-2 text-center">
@@ -35,7 +37,7 @@ else{
                     <h3><?=$team['name']?></h3>
                     
                     <hr class="w-100 bg-white">
-                    <p><strong>Mövqe: </strong> <?=$team['movqe']?></p>
+                    <p><strong>Mövqe: </strong> <?=$movqe?></p>
                     <p><strong>Doğum tarixi: </strong> <?=$team['date']?></p>
                     <p><strong>Ölkə/Şəhər: </strong> <?=$team['country']?></p>
                     <p><a href="<?=$team['facebook']?>"><i class="fab fa-facebook-f"></i></a><a href="<?=$team['instagram']?>"><i class="fab fa-instagram"></i></a><a href="<?=$team['twitter']?>"><i class="fab fa-twitter"></i></a></p>

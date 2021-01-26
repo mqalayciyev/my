@@ -2,7 +2,7 @@
 session_start();
 require "db.php";
 if(!isset($_SESSION["admin"])){
-    ($_SESSION["admin"] != "admin") ? header("Location: index.php") : "";
+    header("Location: index.php");
 }
 
 if(isset($_GET["action"])){
@@ -30,6 +30,7 @@ if(isset($_GET["action"])){
     <link rel="stylesheet" href="css/news.css">
     <link rel="stylesheet" href="css/team.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/statistika.css">
     
     
 

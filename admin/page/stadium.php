@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
 
 $action = (isset($_GET["page"]) && isset($_GET["action"]) && isset($_GET["id"])) ? "edit" : "add";
 
@@ -24,7 +27,7 @@ if($action === "edit"){
                         echo '<div class="alert alert-danger col-12">'.$_SESSION['error'].'</div>';
                         unset($_SESSION['error']);
                     }
-                    else if(isset($_SESSION['success'])){
+                    elseif(isset($_SESSION['success'])){
                         echo '<div class="alert alert-success col-12">'.$_SESSION['success'].'</div>';
                         unset($_SESSION['success']);
                     }

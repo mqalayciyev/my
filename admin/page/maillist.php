@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
+
+?>
 <div class="col-md-9">
     <div class="card card-primary card-outline">
         <div class="card-header clearfix">

@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
+
 $id = $_GET['id'];
 mysqli_query($conn, "UPDATE `mail` SET `status` = 1 WHERE `id` = '$id'");
 $sql = "SELECT * FROM mail WHERE `id` = '$id'";

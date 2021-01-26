@@ -1,3 +1,9 @@
+<?php
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
+
+?>
 <div class="content-wrapper py-3 mb-5">
     <!-- Main content -->
     <section class="content">

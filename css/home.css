@@ -203,6 +203,9 @@
     padding-right: 65px;
     padding-left: 65px;
 }
+.home .last-news .card-column{
+    column-count: 4;
+}
 .home .last-news .card-column .card {
     height: max-content;
     white-space: wrap;
@@ -212,7 +215,7 @@
     width: 100%;
     margin: 0px;
     padding: 0px;
-    width: 100%;
+    width: 25%;
 }
 .home .last-news .card-column .card .card-body p {
     margin: 0px!important;
@@ -340,8 +343,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    opacity: 0.9;
-    filter: blur(2px);
+    opacity: 0.7;
     transition: all 0.3s linear;
     transform: scale(0.95);
 }
@@ -353,7 +355,6 @@
 .fotoalbom .glide__slide--active {
     box-shadow: 4px 4px 6px gray, -4px 4px 6px gray, 4px -4px 6px gray, -4px -4px 6px gray;
     opacity: 1;
-    filter: none;
     transition: all 0.6s;
     transform: scale(1);
 }
@@ -527,7 +528,9 @@
 
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-    
+    .home .last-news .card-column{
+        column-count: 3;
+    }
     .home .last-news .card-column .card {
         height: max-content;
         white-space: wrap;
@@ -537,7 +540,7 @@
         width: 100%;
         margin: 0px;
         padding: 0px;
-        width: 100%;
+        width: 33%;
     }
     .home .last-news .card-column .card .card-body p {
         margin: 0px!important;
@@ -554,7 +557,9 @@
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-    
+    .home .last-news .card-column{
+        column-count: 2;
+    }
     .home .last-news .card-column .card {
         height: max-content;
         white-space: wrap;
@@ -564,7 +569,7 @@
         width: 100%;
         margin: 0px;
         padding: 0px;
-        width: 100%;
+        width: 50%;
     }
     .home .last-news .card-column .card .card-body p {
         margin: 0px!important;
@@ -613,7 +618,9 @@
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-
+    .home .last-news .card-column{
+        column-count: 1;
+    }
 
     .home .last-news .card-column .card {
         height: max-content;
@@ -673,7 +680,9 @@
 }
 
 @media only screen and (max-width: 576px) {
-
+    .home .last-news .card-column{
+        column-count: 1;
+    }
     
     .home .last-news .card-column .card {
         height: max-content;

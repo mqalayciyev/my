@@ -574,6 +574,9 @@ if(isset($_GET["query"])){
             header("Location: admin.php?page=mail&q=maillist&s".$url);
         }
     }
+    else{
+        header("Location: admin.php");
+    }
 }
 elseif(isset($_POST['query'])){
     if($_POST['query'] === "upload_video_tv"){
@@ -603,10 +606,11 @@ elseif(isset($_POST['query'])){
                 $file_dir = $dir.$file_name;
                 
                 $ok = ($file[0] !== "video") ? 0 : 1;
+                echo $ok;
     
                 if($ok){
+                    $title = str_replace("'", "\'", $title);
                     $sql = "INSERT INTO zaqatalatv (`video`, `basliq`) VALUES ('$file_name', '$title')";
-                    echo $sql;
                     if(move_uploaded_file($_FILES["file"]["tmp_name"], $file_dir) && mysqli_query($conn, $sql)){
                         $message = "Fayl yükləndi";
                         $_SESSION['success'] = $message;
@@ -1694,7 +1698,7 @@ elseif(isset($_POST['query'])){
             $res = mysqli_fetch_assoc(mysqli_query($conn, $sql));
             $type = ($_POST['archive'] == "true") ? $res['mainly_type'] : $res['moving'];
 
-            $sql = "UPDATE `mail` SET `type` = '$type' WHERE `id` = '".$id[$i]."' ";
+            $sql = "UPDATE `mail` SET `type` = '$type', `moving` = '$type' WHERE `id` = '".$id[$i]."' ";
             mysqli_query($conn, $sql);
         }
 
@@ -1707,6 +1711,42 @@ elseif(isset($_POST['query'])){
         }
 
     }
+    elseif($_POST['query'] === 'send_mail'){
+        $message = wordwrap($_POST['message'], 70, "\r\n");
+        $to      = $_POST['to'];
+        $subject = $_POST['subject'];
+        $from = $_POST['from'];
+        $headers = 'From: '. $from . "\r\n" .
+            'Reply-To: webmaster@example.com' . "\r\n" .
+            'X-Mailer: PHP/' . phpversion();
+        $sent = mail($to, $subject, $message, $headers);
+        if($sent){
+            $sql  = "INSERT INTO `mail` (`name`, `email`, `send`, `subject`, `text`, `type`, `mainly_type`, `moving`, `status`) VALUES ('$to', '$to', '$from', '$subject', '$message', 'sent', 'sent', 'sent', '1')";
+            $query = mysqli_query($conn, $sql);
+            if($query){
+                $message = "Mesaj göndərildi.";
+                $_SESSION["success"] = $message;
+                header("Location: admin.php?page=mail&q=compase");
+            }
+            else{
+                $message = "Xəta! Mesaj göndərilmədi.";
+                $_SESSION["error"] = $message;
+                header("Location: admin.php?page=mail&q=compase");
+            }
+        }
+        else{
+            $message = "Xəta! Mesaj göndərilmədi. Mailler servere qoşulmaq olmadı.";
+            $_SESSION["error"] = $message;
+            header("Location: admin.php?page=mail&q=compase");
+        }
+    }
+    else{
+        header("Location: admin.php");
+    }
 }
+else{
+    header("Location: admin.php");
+}
+
 
 ?>

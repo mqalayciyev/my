@@ -13,9 +13,30 @@ $uzak_port = isset($_SERVER['REMOTE_PORT']) ? $_SERVER['REMOTE_PORT'] : "empty";
 $proxy_ip = isset($_SERVER['HTTP_X_FORWARDED_FOR']) ? $_SERVER['REMOTE_PORT'] : "empty";
 $cookie = isset($_SERVER['HTTP_COOKIE']) ? $_SERVER['HTTP_COOKIE'] : "empty";
 
-$sql = "INSERT INTO `visitors` (`ip`, `host`, `tarayici`, `geldigi_adres`, `tarayici_dili`, `sunucu_protokolu`, `karakter_seti`, `istek_metodu`, `uzak_port`, `proxy_ip`, `cookie`) 
+$cookie_name = "ip";
+$cookie_value = $ip;
+if(!isset($_COOKIE[$cookie_name])){
+    $sql = "INSERT INTO `visitors` (`ip`, `host`, `tarayici`, `geldigi_adres`, `tarayici_dili`, `sunucu_protokolu`, `karakter_seti`, `istek_metodu`, `uzak_port`, `proxy_ip`, `cookie`) 
         VALUES ('$ip', '$host', '$tarayici', '$geldigi_adres', '$tarayici_dili', '$sunucu_protokolu', '$karakter_seti', '$istek_metodu', '$uzak_port', '$proxy_ip', '$cookie')";
-mysqli_query($conn, $sql);
+    mysqli_query($conn, $sql);
+    setcookie($cookie_name, $cookie_value, time() + (86400 * 15), "/");
+}
+else{
+    if($ip !== $_COOKIE[$cookie_name]){
+        $sql = "INSERT INTO `visitors` (`ip`, `host`, `tarayici`, `geldigi_adres`, `tarayici_dili`, `sunucu_protokolu`, `karakter_seti`, `istek_metodu`, `uzak_port`, `proxy_ip`, `cookie`) 
+        VALUES ('$ip', '$host', '$tarayici', '$geldigi_adres', '$tarayici_dili', '$sunucu_protokolu', '$karakter_seti', '$istek_metodu', '$uzak_port', '$proxy_ip', '$cookie')";
+        mysqli_query($conn, $sql);
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 15), "/");
+    }
+    $sql = "SELECT * FROM visitors WHERE `ip` = '$ip' AND `tarayici` = '$tarayici'";
+    if(mysqli_num_rows(mysqli_query($conn, $sql)) == 0){
+        $sql = "INSERT INTO `visitors` (`ip`, `host`, `tarayici`, `geldigi_adres`, `tarayici_dili`, `sunucu_protokolu`, `karakter_seti`, `istek_metodu`, `uzak_port`, `proxy_ip`, `cookie`) 
+        VALUES ('$ip', '$host', '$tarayici', '$geldigi_adres', '$tarayici_dili', '$sunucu_protokolu', '$karakter_seti', '$istek_metodu', '$uzak_port', '$proxy_ip', '$cookie')";
+        mysqli_query($conn, $sql);
+        setcookie($cookie_name, $cookie_value, time() + (86400 * 15), "/");
+    }
+}
+
 
 $wellcome = "d-block";
 $page = "d-none";
@@ -71,7 +92,7 @@ $youtube = $response['youtube'];
 
     <link rel="shortcut icon" href="media/logo.png" type="text/css">
     <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/home.css">
@@ -88,7 +109,7 @@ $youtube = $response['youtube'];
     <script src="js/56018e5250.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="js/glide.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.2/angular-animate.js"></script>
@@ -136,6 +157,17 @@ $youtube = $response['youtube'];
 
     <div class="context bg-light">
         <div id="header" class="header-div position-relative">
+            
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner w-100 h-100">
+                    <div class="carousel-item active w-100 h-100" style="background-image: url('media/header/img2.jpeg')">
+                    </div>
+                    <div class="carousel-item w-100 h-100" style="background-image: url('media/header/img1.jpeg')">
+                    </div>
+                    <div class="carousel-item w-100 h-100" style="background-image: url('media/header/img2.jpeg')">
+                    </div>
+                </div>
+            </div>
             <div class="transparent-div "></div>
 
             

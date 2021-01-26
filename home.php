@@ -10,7 +10,7 @@ $url ='index.php?page=';
 
 <div class=" home px-0">
     <div class="">
-        <div class="last-game">
+        <div class="last-game mt-5 mb-2">
             <div class="col-12 px-lg-0">
                 <div class="row">
                     <div class="col-12 col-md-5 col-lg-6 pt-0 mt-5 mt-lg-0">
@@ -25,6 +25,19 @@ $url ='index.php?page=';
                     <?php
                         $sql = "SELECT * FROM `games` WHERE `status` ='1' AND `qeyd`='1' AND `oyun_status` = '1' ORDER BY `tarix` ASC";
                         $last_game = mysqli_fetch_assoc(mysqli_query($conn, $sql));
+                        $ay_arr = ['Yanvar', 'Fevral', 'Mart', 'Aprel', 'May', 'İyun', 'İyul', 'Avqust', 'Sentyabr', 'Oktyabr', 'Noyabr', 'Dekabr'];
+                        $hefte_arr = ['Bazar ertəsi', 'Çərşənbə axşamı', 'Çərşənbə', 'Cümə axşamı', 'Cümə', 'Şənbə', 'Bazar'];
+                        $tarix = $last_game['tarix'];
+                        $hefte = $last_game['hefte'];
+                        $hefte = $hefte_arr[$hefte];
+                        $tarix = explode("T", $tarix);
+                        $date = $tarix[0];
+                        $time = $tarix[1];
+                        $date = date_create($date);
+                        $date = date_format($date, "d-m-Y");
+                        $date = explode("-", $date);
+                        $date = trim($date[0], "0") . " " . $ay_arr[trim($date[1], "0")] . " " . $date[2];
+                        $date = $hefte . " " . $date . " Saat " . $time;
                     ?>
                     <div class="col-12 col-md-7 col-lg-6 mt-md-5">
                         <div class="row">
@@ -32,7 +45,7 @@ $url ='index.php?page=';
                                 <div class="row justify-content-between py-lg-3 h-100">
                                     <div class="col-12 pt-md-5">
                                         <div class="row justify-content-center mb-3 mb-md-0">
-                                            <h5 class=""><?php echo $last_game['tarix'] . " " . $last_game['stadium'];?></h5>
+                                            <h5 class=""><?php echo $date . " " . $last_game['stadium'];?></h5>
                                         </div>
                                     </div>
                                     <div class="col-12 px-lg-5 py-0">
@@ -78,7 +91,7 @@ $url ='index.php?page=';
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 mt-3 mx-auto mb-5 mb-lg-0">
+                            <div class="col-12 mt-3 mx-auto ">
                                 <div class="row justify-content-center">
                                     <button type="button" class="btn btn-outline-green btn-small mx-auto"
                                         name="button"><a href="<?=$url?>team">Daha
@@ -244,7 +257,7 @@ $url ='index.php?page=';
                                 <?php
                                     $sql = "SELECT * FROM `galeri` WHERE `status` = 1 LIMIT 6";
                                     $query = mysqli_query($conn, $sql);
-                                    
+                                    $count = mysqli_num_rows($query);
                                     while($galeri = mysqli_fetch_assoc($query)){
                                         echo "<li class='glide__slide'><img src='media/albom/".$galeri['image']."' alt='".$galeri['image']."' /><span class='view-span'
                                         aria-label='media/albom/".$galeri['image']."'>&#x26F6</span></li>";
@@ -255,12 +268,11 @@ $url ='index.php?page=';
                         </div>
 
                         <div class="glide__bullets" data-glide-el="controls[nav]">
-                            <button class="glide__bullet" data-glide-dir="=0"></button>
-                            <button class="glide__bullet" data-glide-dir="=1"></button>
-                            <button class="glide__bullet" data-glide-dir="=2"></button>
-                            <button class="glide__bullet" data-glide-dir="=3"></button>
-                            <button class="glide__bullet" data-glide-dir="=4"></button>
-                            <button class="glide__bullet" data-glide-dir="=5"></button>
+                            <?php
+                                for($i = 0; $i < $count; $i++){
+                                    echo '<button class="glide__bullet" data-glide-dir="='.$i.'"></button>';
+                                }
+                            ?>
                         </div>
                     </div>
                 </div>

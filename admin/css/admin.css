@@ -38,7 +38,7 @@
 
 .nav-div{
     background-color: #222529;
-    max-width: 280px;
+    max-width: 20vw;
     max-height: max-content;
     position: sticky;
     overflow: auto;

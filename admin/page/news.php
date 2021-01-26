@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION["admin"])){
+    header("Location: ../index.php");
+}
 
 $news_update = (isset($_GET["page"]) && isset($_GET["action"]) && isset($_GET["id"])) ? "d-block" : "d-none";
 
